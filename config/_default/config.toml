@@ -2,69 +2,102 @@ baseURL = "https://eri24816.grapycal.com/"
 languageCode = "en-us"
 title = "Eri24816’s Blog"
 theme = "DoIt"
+[params.home.profile]
+  enable = true
+  # Gravatar Email for preferred avatar in home page
+  gravatarEmail = ""
+  # URL of avatar shown in home page
+  avatarURL = "https://cdn.discordapp.com/avatars/364976571192311808/b893a0e5d67d8c12b9e42d364f2a1379.webp?size=128"
+  # URL the avatar links to
+  avatarLinkURL = ""
+  social = true
+  subtitle = "What are machines thinking about?"
+  typeit = true
 
-[home.profile]
-    enable = true
-    # Gravatar Email for preferred avatar in home page
-    # Gravatar 邮箱，用于优先在主页显示的头像
-    gravatarEmail = ""
-    # URL of avatar shown in home page
-    # 主页显示头像的 URL
-    avatarURL = "/images/avatar.webp"
-    # URL the avatar links to
-    # 头像的链接指向的 URL
-    avatarLinkURL = ""
-    # title shown in home page (HTML format is supported)
-    # 主页显示的网站标题 (支持 HTML 格式)
+  
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
     title = ""
-    # subtitle shown in home page
-    # 主页显示的网站副标题
-    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
-    # whether to use typeit animation for subtitle
-    # 是否为副标题显示打字机动画
-    typeit = false
-    # whether to show social links
-    # 是否显示社交账号
-    social = true
-    # disclaimer (HTML format is supported)
-    # 免责声明 (支持 HTML 格式)
-    disclaimer = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
 
-[[main]]
-  identifier = "posts"
-  # you can add extra information before the name (HTML format is supported), such as icons
-  # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-  pre = ""
-  # you can add extra information after the name (HTML format is supported), such as icons
-  # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-  post = ""
-  name = "Posts"
-  url = "/posts/"
-  # title will be shown when you hover on this menu link.
-  # 将鼠标悬停在此菜单链接上时将显示标题。
-  title = ""
-  weight = 1
-[[main]]
-  identifier = "tags"
-  pre = ""
-  post = ""
-  name = "Tags"
-  url = "/tags/"
-  title = ""
-  weight = 2
-[[main]]
-  identifier = "categories"
-  pre = ""
-  post = ""
-  name = "Categories"
-  url = "/categories/"
-  title = ""
-  weight = 3
-[[main]]
-  identifier = "series"
-  pre = ""
-  post = ""
-  name = "Series"
-  url = "/series/"
-  title = ""
-  weight = 4
+[params.search]
+    enable = true
+    # type of search engine ("algolia", "fuse")
+    type = "fuse"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # DoIt NEW | 0.2.1 max number of results length
+    maxResultLength = 10
+    # DoIt NEW | 0.2.3 snippet length of the result
+    snippetLength = 30
+    # DoIt NEW | 0.2.1 HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # DoIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+    [params.search.algolia]
+      index = ""
+      appID = ""
+      searchKey = ""
+    [params.search.fuse]
+      # DoIt NEW | 0.2.12 https://fusejs.io/api/options.html
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
+
+  [params.header.title]
+    # URL of the LOGO
+    logo = "https://cdn.discordapp.com/avatars/364976571192311808/b893a0e5d67d8c12b9e42d364f2a1379.webp?size=128"
+    # title name
+    name = "Eri24816’s Blog"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    # DoIt NEW | 0.2.5 whether to use typeit animation for title name
+    typeit = false
+
+[params.social]
+   GitHub = "eri24816"
+   Email = "a931eric@gmail.com"
+
+[params.typeit]
+  # typing speed between each step (measured in milliseconds)
+  speed = 80
+  # blinking speed of the cursor (measured in milliseconds)
+  cursorSpeed = 1000
+  # character used for the cursor (HTML format is supported)
+  cursorChar = "|"
+  # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+  duration = -1
