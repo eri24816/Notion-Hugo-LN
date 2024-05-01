@@ -3,31 +3,68 @@ languageCode = "en-us"
 title = "Eri24816’s Blog"
 theme = "DoIt"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
+[home.profile]
+    enable = true
+    # Gravatar Email for preferred avatar in home page
+    # Gravatar 邮箱，用于优先在主页显示的头像
+    gravatarEmail = ""
+    # URL of avatar shown in home page
+    # 主页显示头像的 URL
+    avatarURL = "/images/avatar.webp"
+    # URL the avatar links to
+    # 头像的链接指向的 URL
+    avatarLinkURL = ""
+    # title shown in home page (HTML format is supported)
+    # 主页显示的网站标题 (支持 HTML 格式)
     title = ""
-    weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 3
+    # subtitle shown in home page
+    # 主页显示的网站副标题
+    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+    # whether to use typeit animation for subtitle
+    # 是否为副标题显示打字机动画
+    typeit = false
+    # whether to show social links
+    # 是否显示社交账号
+    social = true
+    # disclaimer (HTML format is supported)
+    # 免责声明 (支持 HTML 格式)
+    disclaimer = ""
+
+[[main]]
+  identifier = "posts"
+  # you can add extra information before the name (HTML format is supported), such as icons
+  # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+  pre = ""
+  # you can add extra information after the name (HTML format is supported), such as icons
+  # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+  post = ""
+  name = "Posts"
+  url = "/posts/"
+  # title will be shown when you hover on this menu link.
+  # 将鼠标悬停在此菜单链接上时将显示标题。
+  title = ""
+  weight = 1
+[[main]]
+  identifier = "tags"
+  pre = ""
+  post = ""
+  name = "Tags"
+  url = "/tags/"
+  title = ""
+  weight = 2
+[[main]]
+  identifier = "categories"
+  pre = ""
+  post = ""
+  name = "Categories"
+  url = "/categories/"
+  title = ""
+  weight = 3
+[[main]]
+  identifier = "series"
+  pre = ""
+  post = ""
+  name = "Series"
+  url = "/series/"
+  title = ""
+  weight = 4
