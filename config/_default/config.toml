@@ -90,6 +90,9 @@ theme = "DoIt"
 
 [params.social]
    GitHub = "eri24816"
+   Instagram = "eri24816"
+   Youtubechannel = "UCuPkbR7LrU9I1onmsYepeUw"
+   Facebook = "100009817681140"
    Email = "a931eric@gmail.com"
 
 [params.typeit]
@@ -101,3 +104,11 @@ theme = "DoIt"
   cursorChar = "|"
   # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
   duration = -1
+
+[params.page.toc]
+      # whether to enable the table of the contents
+      enable = true
+      # DoIt NEW | 0.2.9 whether to keep the static table of the contents in front of the post
+      keepStatic = true
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
